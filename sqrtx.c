@@ -2,25 +2,25 @@
 
 int mySqrt(int x)
 {
-	unsigned long long mid;
+	unsigned long mid;
 
-	mid = x / 2;
+	mid = (unsigned long)x / 2;
 
-	if (x == 0)
+	if ((unsigned long)x == 0)
 		return (0);
-	if (x == 1)
+	if ((unsigned long)x == 1)
 		return (1);
-	return (find_sqrt(mid, x));
+	return (find_sqrt(mid, (unsigned long)x));
 }
 
-unsigned long long find_sqrt(unsigned long long i, int x)
+unsigned long find_sqrt(unsigned long i, unsigned long x)
 {
-	if (i * i <= x)
+	if (i * i <= (unsigned long)x)
 		return (sqrt_finder(i, x));
 	return (find_sqrt(i / 2, x));
 }
 
-unsigned long long sqrt_finder(unsigned long long sqrt_low, int x)
+unsigned long sqrt_finder(unsigned long sqrt_low, unsigned long x)
 {
 	if (sqrt_low * sqrt_low < x)
 		return (sqrt_finder(sqrt_low + 1, x));
