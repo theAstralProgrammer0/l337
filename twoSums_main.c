@@ -16,12 +16,13 @@ int main(void)
 	i = 0;
 	while (i < returnSize)
 	{
-		if (i >= returnSize)
+		if (i == returnSize - 1)
 			printf("%d", ret_arr[i]);
-		printf("%d, ", ret_arr[i]);
+		else
+			printf("%d, ", ret_arr[i]);
 		i++;
 	}
 
-	printf("]\n");
+	printf(" ]\n");
 	return (0);
 }
