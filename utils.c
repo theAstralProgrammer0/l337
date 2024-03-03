@@ -14,6 +14,4 @@ void print_array(int *array, size_t size)
 		i++;
 	}
 	printf(" ]\n");
-
-	printf("%d\n", array[1]);
 }
